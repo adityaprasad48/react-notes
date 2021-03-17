@@ -1,0 +1,23 @@
+.otp__item {
+	color: orange;
+	font-size: 20px;
+}
+
+.is-active {
+	border: 1px solid pink;
+}
+
+.highlight {
+	transition: all 0.2s;
+	border-bottom: 2px solid white;
+	position: absolute;
+	top: 0;
+	background-color: lightgreen;
+    display: inline-block;
+	left: 0;
+	z-index: -1;
+	border-radius: 20px;
+	display: block;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+ 

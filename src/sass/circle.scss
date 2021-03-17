@@ -1,0 +1,31 @@
+.circle {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 3px;
+	background-color: lightblue;
+    
+}
+
+.circle-border {
+	width: 500px;
+	border: 4px dashed lightgreen;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+
+.circle-focus {
+	background-color: lightgreen;
+
+    
+}
+
+
+.logo {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+}

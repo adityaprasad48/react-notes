@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import App from "./App";
+import AppRouting from "./components/AppRouting";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "./sass/main.scss";
-import store from "./store";
+import store from "./store/store";
 
 ReactDOM.render(
 	<Provider store={store}>
-		<App />
+		<AppRouting />
 	</Provider>,
 	document.getElementById("root")
 );

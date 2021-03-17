@@ -7,7 +7,7 @@ import {
 	removeBook,
 	selectAllBooks,
 	updateBook,
-} from "../reducers/booksSlice";
+} from "../../reducers/booksSlice";
 import {
 	AddBtn,
 	Card,
@@ -19,7 +19,10 @@ import {
 	EditBtn,
 	Input,
 	P,
-} from "../style";
+} from "../../styled";
+
+
+
 
 const Book = () => {
 	const dispatch = useDispatch();
@@ -88,7 +91,7 @@ const Book = () => {
 			</Container>
 			{allBooks?.map((book) => (
 				<Card key={book.id}>
-					<CardTitle>{book.title}</CardTitle>
+					<CardTitle contentEditable>{book.title}</CardTitle>
 					<DeleteBtn onClick={() => handleDelete(book.id)}>
 						Del
 					</DeleteBtn>

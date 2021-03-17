@@ -1,10 +1,16 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loadUsers, addUser, selectAllUsers, updateUser, removeUser } from "../reducers/userSlice";
+import {
+	addUser,
+	loadUsers,
+	removeUser,
+	selectAllUsers,
+	updateUser,
+} from "../../reducers/userSlice";
 
 const UserList = () => {
-    const users = useSelector(selectAllUsers)
+	const users = useSelector(selectAllUsers);
 	const dispatch = useDispatch();
 	const [input, setInput] = useState("");
 	useEffect(() => {
@@ -48,20 +54,27 @@ const UserList = () => {
 				<input type="submit" value="Add" />
 			</form>
 			<h1>User List</h1>
-            <div>
-                {users.map(user => (
-                    <div>
-                       <img src={user.image}/>
-                       <input value={user.name} onChange={e => {
-                           dispatch(updateUser({
-                               id: user.id,
-                               changes: {name: e.target.value}
-                           }))
-                       }}/>
-                       <button onClick={() => dispatch(removeUser(user.id))}>Del</button>
-                    </div>
-                ))}
-            </div>
+			<div>
+				{users.map((user) => (
+					<div>
+						<img src={user.image} />
+						<input
+							value={user.name}
+							onChange={(e) => {
+								dispatch(
+									updateUser({
+										id: user.id,
+										changes: { name: e.target.value },
+									})
+								);
+							}}
+						/>
+						<button onClick={() => dispatch(removeUser(user.id))}>
+							Del
+						</button>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };
